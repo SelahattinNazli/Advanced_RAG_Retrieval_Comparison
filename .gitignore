@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# UV
+.uv/
+
+# Virtual environments
+venv/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+storage/
+merging_index*/
+sentence_index*/
+basic_index*/
+*.index
+*.pkl
+*.cache
+
+# Data (but keep directory structure)
+data/*.pdf
+data/*.txt
+data/*.docx
+!data/README.md
+!data/.gitkeep
+
+# Model cache
+models/
+.cache/
+huggingface/
+
+# Logs
+*.log
+logs/
+
+# Streamlit
+.streamlit/
