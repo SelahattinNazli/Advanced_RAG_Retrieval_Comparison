@@ -247,5 +247,4 @@ MIT License - feel free to use for any purpose.
 - [LlamaIndex](https://www.llamaindex.ai/) - RAG framework
 - [RAGAS](https://github.com/explodinggradients/ragas) - Evaluation metrics
 - [Ollama](https://ollama.com/) - Local LLM runtime
-- [DeepLearning.AI](https://www.deeplearning.ai/) - Inspiration from RAG course
 
