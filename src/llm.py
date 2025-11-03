@@ -39,7 +39,7 @@ class OllamaLLM:
             request_timeout=self.request_timeout,
         )
         
-        print(f"✅ Ollama LLM initialized: {self.model}")
+        print(f" Ollama LLM initialized: {self.model}")
     
     def complete(self, prompt: str) -> str:
         """
@@ -99,7 +99,7 @@ class OllamaLLM:
             )
             
             if response.status_code != 200:
-                print(f"❌ Ollama not accessible at {Config.OLLAMA_BASE_URL}")
+                print(f" Ollama not accessible at {Config.OLLAMA_BASE_URL}")
                 return False
             
             # Check if model is available
@@ -107,18 +107,18 @@ class OllamaLLM:
             model_names = [m["name"] for m in models]
             
             if Config.OLLAMA_MODEL not in model_names:
-                print(f"❌ Model {Config.OLLAMA_MODEL} not found")
+                print(f" Model {Config.OLLAMA_MODEL} not found")
                 print(f"Available models: {model_names}")
                 print(f"\nTo pull the model, run:")
                 print(f"  ollama pull {Config.OLLAMA_MODEL}")
                 return False
             
-            print(f"✅ Ollama connection successful")
-            print(f"✅ Model {Config.OLLAMA_MODEL} is available")
+            print(f" Ollama connection successful")
+            print(f" Model {Config.OLLAMA_MODEL} is available")
             return True
             
         except Exception as e:
-            print(f"❌ Failed to connect to Ollama: {e}")
+            print(f" Failed to connect to Ollama: {e}")
             print(f"\nMake sure Ollama is running:")
             print(f"  ollama serve")
             return False
@@ -141,7 +141,7 @@ def get_llm() -> Ollama:
 
 # Test on import (optional - comment out if not needed)
 if __name__ == "__main__":
-    print("\n🧪 Testing Ollama connection...")
+    print("\n Testing Ollama connection...")
     OllamaLLM.test_connection()
     
     # Test completion
