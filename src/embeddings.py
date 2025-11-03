@@ -27,7 +27,7 @@ class EmbeddingModel:
         self.device = device or Config.EMBEDDING_DEVICE
         self.batch_size = batch_size or Config.EMBEDDING_BATCH_SIZE
         
-        print(f"🔄 Loading embedding model: {self.model_name}")
+        print(f" Loading embedding model: {self.model_name}")
         print(f"   Device: {self.device}")
         
         # Initialize HuggingFace embedding
@@ -36,7 +36,7 @@ class EmbeddingModel:
             device=self.device,
         )
         
-        print(f"✅ Embedding model loaded successfully")
+        print(f" Embedding model loaded successfully")
     
     def get_text_embedding(self, text: str) -> List[float]:
         """
@@ -115,7 +115,7 @@ class RerankerModel:
         self.model_name = model_name or Config.RERANKER_MODEL
         self.top_n = top_n or Config.RERANK_TOP_N
         
-        print(f"🔄 Loading reranker model: {self.model_name}")
+        print(f" Loading reranker model: {self.model_name}")
         
         try:
             from llama_index.core.postprocessor import SentenceTransformerRerank
@@ -125,11 +125,11 @@ class RerankerModel:
                 model=self.model_name,
             )
             
-            print(f"✅ Reranker model loaded successfully")
+            print(f" Reranker model loaded successfully")
             print(f"   Top N: {self.top_n}")
             
         except Exception as e:
-            print(f"⚠️  Failed to load reranker: {e}")
+            print(f"  Failed to load reranker: {e}")
             print(f"   Continuing without reranking...")
             self.reranker = None
     
@@ -182,5 +182,5 @@ if __name__ == "__main__":
     print(f"\nBatch embeddings shape: {len(embeddings)} x {len(embeddings[0])}")
     
     # Test reranker
-    print("\n🧪 Testing Reranker Model...")
+    print("\n Testing Reranker Model...")
     reranker = RerankerModel()
