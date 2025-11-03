@@ -71,7 +71,7 @@ def create_project_structure():
     # Create project root
     project_root = Path("advanced-rag-comparison")
     project_root.mkdir(exist_ok=True)
-    print(f"\n📁 Creating project: {project_root}\n")
+    print(f"\n Creating project: {project_root}\n")
     
     # Create structure
     create_structure(project_root, structure)
@@ -83,7 +83,7 @@ def create_project_structure():
             filepath.write_text(content)
             print(f"Created file: {filepath}")
     
-    print(f"\n✅ Project structure created successfully!\n")
+    print(f"\n Project structure created successfully!\n")
     print("Next steps:")
     print("  cd advanced-rag-comparison")
     print("  uv venv")
